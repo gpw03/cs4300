@@ -1,0 +1,5 @@
+[tool.pytest.ini_options]
+# Telling pytest to look here for tests
+testpaths = ["tests"]
+# Telling pytest where the source directory is
+pythonpath = ["src"]
