@@ -37,6 +37,6 @@ def one_to_hundred() -> int:
     sum = 1 # Return value
     
     while count <= 100:
-        sum =+ count
+        sum += count
         count += 1
     return sum
