@@ -1,8 +1,10 @@
 import task5
 
+# Test function for print_books() in task5
 def test_book_list(capsys):
-    task5.print_books()
-    output = capsys.readouterr()
+    task5.print_books() # Call print_books()
+    output = capsys.readouterr() # Capture output of print_books()
+    # Make sure the output is the top three books
     assert output.out == "['The Tattoist of Auschwits, Heather Morris', 'Refugee, Alan Gratz', 'The Tipping Point, Malcolm Gladwell']\n"
 
 # Test function for student_databases() in task5
