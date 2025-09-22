@@ -28,4 +28,9 @@ def student_database() -> dict[str, int]:
     # Returning the DB so it can be looked at in testing
     return student_db
 
-
+if __name__ == "__main__":
+    print("print_books() output:")
+    print_books()
+    print("student_database() db:")
+    db = student_database()
+    print(db)

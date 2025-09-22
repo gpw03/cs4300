@@ -12,3 +12,7 @@ def count_words(file_path: str) -> int:
         words = content.split()
         word_count = len(words)
     return word_count # Returning word count
+
+if __name__ == "__main__":
+    wc = count_words('~/cs4300/homework1/task6_read_me.txt')
+    print(f"Word count of given text: {wc}")

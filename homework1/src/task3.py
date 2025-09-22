@@ -40,3 +40,19 @@ def one_to_hundred() -> int:
         sum += count
         count += 1
     return sum
+
+if __name__ == "__main__":
+    sign_1 = check_sign(-1)
+    sign_2 = check_sign(0)
+    sign_3 = check_sign(1)
+    print(f"-1 sign: {sign_1}")
+    print(f"0 sign: {sign_2}")
+    print(f"1 sign: {sign_3}")
+    primes = print_prime_nums()
+    print(f"Primes: {primes}")
+    is_5_prime = is_prime(5)
+    is_20_prime = is_prime(20)
+    print(f"5 is prime: {is_5_prime}")
+    print(f"20 is prime: {is_20_prime}")
+    full_count = one_to_hundred()
+    print(f"Addition of every number from 1 to 100 = {full_count}")
