@@ -41,6 +41,7 @@ def one_to_hundred() -> int:
         count += 1
     return sum
 
+# Calling all the functions with test values and printing them out
 if __name__ == "__main__":
     sign_1 = check_sign(-1)
     sign_2 = check_sign(0)

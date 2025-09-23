@@ -6,6 +6,7 @@ def calculate_discount(price: int, discount: float) -> int:
     rounded_cost = round(cost, 2) # Rounding to 2 deicmals because its money
     return rounded_cost
 
+# Calling the function with test values and printing
 if __name__ == "__main__":
     discount = calculate_discount(100, 20)
     print(f"$100 with a 20% discount is: {discount}")

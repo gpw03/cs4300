@@ -14,6 +14,7 @@ def concat_strings(a: str, b: str) -> str:
 def above_twenty(a: int) -> bool:
     return a > 20
 
+# Calling all the functions then printing the values
 if __name__ == "__main__":
     sum = add_ints(2, 3)
     print(f"2 + 3 = {sum}")
