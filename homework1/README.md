@@ -1,4 +1,4 @@
-# Homework 1 Inctructions
+# Homework 1 Instructions
 This is the set of instructions needed to run homework1.
 
 ## Setup environment
@@ -11,9 +11,9 @@ This starts the virtual environment.
 ## Running code
 Navigate to the `~/cs4300/homework1/src` directory.
 
-For each task run:
+For each task one through seven run:
 ```
-python3 task#.py
+python3 task(1-7).py
 ```
 
 ## Running tests (pytest)
