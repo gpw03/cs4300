@@ -16,5 +16,5 @@ For each task run:
 python3 task#.py
 ```
 
-## Running pytest
+## Running tests (pytest)
 Inside of the `~/cs4300/homework1` directory run `pytest`.
