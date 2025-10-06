@@ -17,9 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from bookings import views as bv
+from django.views.generic import RedirectView
 
 urlpatterns = [
-    path('bookings/', include("bookings.urls")),
     path('admin/', admin.site.urls),
-    path("", bv.MovieViewSet, name="movie_list")
+    path('', include('bookings.urls')),
+    path("", RedirectView.as_view(pattern_name="movie_list", permanent=False)),
 ]

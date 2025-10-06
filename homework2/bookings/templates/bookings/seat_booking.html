@@ -17,8 +17,10 @@
               {% endif %}
             </p>
             {% if seat.status != 'BOOKED' %}
-              <form method="post" action="{% url 'book_seat' movie.id seat.id %}">
+              <form method="post" action="{% url 'seat_booking' movie.id %}">
                 {% csrf_token %}
+                <input type="hidden" name="seat_id" value="{{ seat.id }}">
+                <input type="hidden" name="user" value="Guest">
                 <button class="btn btn-primary btn-sm" type="submit">Book</button>
               </form>
             {% else %}

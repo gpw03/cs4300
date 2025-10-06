@@ -10,7 +10,7 @@
                         <h5 class="card-title">{{ movie.title }}</h5>
                         <p class="card-text text-secondary mb-2">{{ movie.description|default:"No description." }}</p>
                         <p class="mb-2"><strong>Release:</strong> {{ movie.release_date }} · <strong>Duration:</strong> {{ movie.duration }} min</p>
-                        <a class="btn btn-primary" href="{% url 'seat_booking' %}">Book seats</a>
+                        <a class="btn btn-primary" href="{% url 'seat_booking' movie.id %}">Book seats</a>
                     </div>
                 </div>
             </div>
