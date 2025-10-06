@@ -1,0 +1,54 @@
+{% extends "bookings/base.html" %}
+{% block title %}My Bookings{% endblock %}
+{% block content %}
+  <h2 class="mb-4">Booking History</h2>
+
+  {% if messages %}
+    <div class="mb-3">
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if bookings %}
+    <div class="table-responsive">
+      <table class="table table-striped align-middle">
+        <thead>
+          <tr>
+            <th scope="col">When</th>
+            <th scope="col">Movie</th>
+            <th scope="col">Seat</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for b in bookings %}
+            <tr>
+              <td>{{ b.booked_at|date:"Y-m-d H:i" }}</td>
+              <td>{{ b.movie.title }}</td>
+              <td>Seat {{ b.seat.seat_number }}</td>
+              <td>
+                {% if b.seat.status %}
+                  {% if b.seat.status == 'BOOKED' %}
+                    <span class="badge text-bg-danger">Booked</span>
+                  {% else %}
+                    <span class="badge text-bg-success">{{ b.seat.status }}</span>
+                  {% endif %}
+                {% else %}
+                  {% if b.seat.is_booked %}
+                    <span class="badge text-bg-danger">Booked</span>
+                  {% else %}
+                    <span class="badge text-bg-success">Available</span>
+                  {% endif %}
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <p class="text-secondary">No bookings yet.</p>
+  {% endif %}
+{% endblock %}
