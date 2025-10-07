@@ -30,7 +30,6 @@ ALLOWED_HOSTS = ['app-gwilli17-19.devedu.io', 'homework-2-25mg.onrender.com']
 CSRF_TRUSTED_ORIGINS = [
     "https://app-gwilli17-19.devedu.io",
     "https://editor-gwilli17-19.devedu.io",
-    'homework-2-25mg.onrender.com',
 ]
 
 # Application definition
