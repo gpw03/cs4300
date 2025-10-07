@@ -25,11 +25,12 @@ SECRET_KEY = 'django-insecure-i(7j_@w5szw&6*yr-1oqsw!@3f!rju14^y@k2y01%kjpaj!p@w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['app-gwilli17-19.devedu.io']
+ALLOWED_HOSTS = ['app-gwilli17-19.devedu.io', 'homework-2-25mg.onrender.com']
 
 CSRF_TRUSTED_ORIGINS = [
     "https://app-gwilli17-19.devedu.io",
     "https://editor-gwilli17-19.devedu.io",
+    'homework-2-25mg.onrender.com',
 ]
 
 # Application definition
